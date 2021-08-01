@@ -97,7 +97,7 @@ const LeftSidebar = () => {
   return (
     <div className={classes.root}>
       <Grid container direction={"row-reverse"} onClick={handleToggleMenu} style={{cursor: 'pointer'}}>
-        <img src={getImage()} style={{width: 50, height: 50, borderRadius: '50%'}}/>
+        <img src={getImage()} style={{width: 50, height: 50, borderRadius: '50%'}} alt="user"/>
         <Grid item container direction={"column"} style={{width: 'max-content'}} className={classes.profText}>
           <Typography className={classes.profName}>{localStorage.getItem("name")}</Typography>
           <Typography className={classes.profId}>{localStorage.getItem("username")}</Typography>
@@ -111,7 +111,7 @@ const LeftSidebar = () => {
         <Divider style={{marginLeft: -24, marginRight: -24}}/>
         {
           users.map((item, index) => {
-            return (<Link to={`/users/${item._id}/${item.name}`} style={{width: "100%"}}>
+             return (<Link to={`/users/${item._id}/${item.name}`} style={{width: "100%"}}>
               <Tweeter name={item.name} id={item.username} img={item.image}/>
               {index !== users.length - 1 &&
               <Divider style={{marginLeft: -24, marginRight: -24}}/>

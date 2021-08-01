@@ -27,7 +27,8 @@ const useStyles = makeStyles(theme => ({
     background: "#f5f8fa",
     marginTop: "3rem",
     borderRadius: "2.5rem",
-    padding: "11px 24px"
+    padding: "11px 24px",
+    
   },
   tweeterTitle: {
     fontSize: '1.1rem !important',
